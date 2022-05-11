@@ -1,0 +1,10 @@
+a = float(input('¬ведите значение a: '))
+b = float(input('¬ведите значение b: '))
+c = float(input('¬ведите значение c: '))
+
+def area(a,b,c):
+	p = (a + b + c) / 2
+	S = (p * (p - a) * (p - b) * (p - c)) ** (1/2)
+	return(S)
+
+print(area(a,b,c)) 

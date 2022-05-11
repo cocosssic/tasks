@@ -1,0 +1,16 @@
+import json
+
+def reg(login, passwd):
+	with open('data.json', 'r') as f:
+		data = json.load(f)
+	if login in data.keys():
+		print('Ћогин зан€т')
+	else:
+		data[login] = passwd
+		with open('data.json', 'w') as f:
+			json.dump(data, f)
+
+log = input('¬ведите логин: ')
+passwd = input('¬ведите пароль: ')
+
+reg(log, passwd) 
